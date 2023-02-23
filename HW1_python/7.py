@@ -1,7 +1,7 @@
 n = int(input())
-if n % 10 == 1 and n not in range(11, 21):
+if n % 10 == 1 and n not in range(11, 21): #если кол-во коров равно 1 и строго не принадлежит диапазону от 11 до 20 то пишем 'korova'
     print(n, 'korova')
-elif  n % 10 > 1 and n % 10 < 5 and n not in range(11, 21):
+elif  n % 10 > 1 and n % 10 < 5 and n not in range(11, 21): #если кол-во коров больше 1 и число на конце меньше 5 + строго не принадлежит диапазону от 11 до 20 то пишем 'korovy'
     print(n, 'korovy')
-elif n % 10 >= 5 or n % 10 == 0 or n in range(11, 21):
+elif n % 10 >= 5 or n % 10 == 0 or n in range(11, 21): # во всех оставшихся случаях включая диапахон 11-20 пишем 'korov'
     print(n, 'korov')
