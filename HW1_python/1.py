@@ -1,10 +1,10 @@
 k = int(input())
-m = int(input()) #ввод
+m = int(input())
 n = int(input())
-if n > k: #если n < k то нам будет нужно больше одной итерации жарки
+if n > k:
     iter = n // k
     out = m * 2 * n * iter
     print(out)
 else:
-    out = n * m * 2 #иначе нам хватит одной итерации 
+    out = n * m * 2
     print(out)
