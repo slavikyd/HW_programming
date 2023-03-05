@@ -1,3 +1,4 @@
+#работает но не до конца
 n = int(input())
 k = int(input())
 row = int(input())
