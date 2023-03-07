@@ -1,13 +1,13 @@
 out = 0
 cout = 1
-a = int(input())
-while a:
-    b = int(input())
-    if a == b:
+n = int(input())
+while n:
+    cout1 = int(input())
+    if n == cout1:
         cout += 1
     else:
         if cout > out :
             out = cout
             cout = 1
-    a = b
+    n = cout1
 print(out)  
