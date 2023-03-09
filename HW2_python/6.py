@@ -2,11 +2,11 @@ n = int(input())
 
 out = 1
 cout = 1
-for i in range(1, n + 1):
-    cout = cout / i
+for i in range(1, n + 1): #до n+1 т.к кол-во действий должно быть равно n, но начинаться с 1
+    cout = cout / i #считаем сумму 
     out += cout
 
-if out % 1:
-    print(round(out, 5))
+if out % 1: #если полученная сумма имеет числа отличные от нуля после точки
+    print(round(out, 5)) #по условию округляем до 5 знаков после запятой
 else:
-    print(round(out))
+    print(round(out)) #в ином случае просто округляем чтобы не было не нужных нулей и точек при выводе
