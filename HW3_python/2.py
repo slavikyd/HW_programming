@@ -5,6 +5,6 @@ def out():
     outlst = []
     for i in range(n): #создаем пустой лист и добавляем в него заданное кол-во чисел, параллельно объединяя в одно
         outlst.append(str(sequence[i]))
-    answ = ''.join(outlst)
+    answ = ''.join(outlst) #соединяем список в строку дабы получить такой же как в примере формат вывода
     return answ
 print(out())
