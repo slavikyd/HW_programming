@@ -1,15 +1,13 @@
-mas = []
-n = int(input())
-for i in range(n):
-    inp = input().split()
-    mas.append(inp)
-k = 0
-out = 0
-while k != n - 1:
-    if mas[k][k] == mas[k + 1][k + 1]:
-        out += 1    
-    k += 1
-if out == n:
+def isSymmetric(num):
+    x = 0
+    for j in range(1, len(num) - 1): #получение строки \ столбца по диагонали
+        for i in range(j, len(num)): #проходимся по значениям строчки
+            if num[i][x] != num[x][i]: #если значение на котором мы стоим не равно следующему в следующей строке значит матрица не симметрична
+                print('NO')
+                return #выходим из функции
+        x += 1 #обновляем счетчик
     print('YES')
-else:
-    print('NO')
+
+n = int(input())
+inp = [list(map(int, input().split())) for i in range(n)] #ввод матрицы в одну строчку через for
+isSymmetric(inp)
