@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-//not stable version
+//not stable 
 int minimal(int a, int b)
 {
     return (a < b) ? a: b;
