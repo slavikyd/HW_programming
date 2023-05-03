@@ -1,16 +1,21 @@
-#include<stdio.h>    
+#include <stdio.h>
+#include <stdlib.h>
+void binary(int num) {
+    if(num / 2 != 0) {
+        binary(num / 2);
+        }
+    printf("%d", (num % 2));
+}
 
 
-int main(){  
-  int a[10],n,i;    
-  scanf("%d",&n);    
-  for(i=0;n>0;i++){    
-    a[i]=n%2;    
-    n=n/2;    
-  }    
-  
-  for(i=i-1;i>=0;i--){    
-    printf("%d",a[i]);    
-  }    
-  return 0;  
-}  
+
+
+int main() {
+    int num;
+    scanf("%d", &num);
+
+    if(num < 0) {
+        printf("-");
+    }
+    binary(abs(num));
+}
