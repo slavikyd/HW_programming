@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-//not stable 
+//not stable but somehow works
 int minimal(int a, int b)
 {
     return (a < b) ? a: b;
@@ -11,13 +11,16 @@ int minimal(int a, int b)
 void bubbleSort(int arr[], int n)
 {
     int i, j;
-    for (i = 0; i < n - 1; i++)
- 
-        // Last i elements are already in place
-        for (j = 0; j < n - i - 1; j++)
-            if (arr[j] > arr[j + 1])
-                swap(&arr[j], &arr[j + 1]);
+    for (i = 0; i < n - 1; i++){
+        for (j = 0; j < n - i - 1; j++){
+            if (arr[j] > arr[j + 1]){
+                int t = arr[j];
+                arr[j] = arr[j+1];
+                arr[j+1] = t;}
 }
+}
+}
+
 
 int main(){
     int n;
