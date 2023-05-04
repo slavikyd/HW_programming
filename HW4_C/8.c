@@ -6,10 +6,17 @@ int minimal(int a, int b)
     return (a < b) ? a: b;
 }
 
-int sravn(const void* a, const void* b) {
-    int c1 = *(const int*) a;
-    int c2 = *(const int*) b;
-    return c1 > c2;
+
+
+void bubbleSort(int arr[], int n)
+{
+    int i, j;
+    for (i = 0; i < n - 1; i++)
+ 
+        // Last i elements are already in place
+        for (j = 0; j < n - i - 1; j++)
+            if (arr[j] > arr[j + 1])
+                swap(&arr[j], &arr[j + 1]);
 }
 
 int main(){
@@ -19,7 +26,7 @@ int main(){
     for(int i = 0; i < n; i++) {
         scanf("%d", &arr[i]);
     }
-    qsort(arr, n, sizeof(int), sravn);
+    bubbleSort(arr, n);
     int dp[n];
     dp[0] = 0;
     for(int i = 1; i < n; i++) {
