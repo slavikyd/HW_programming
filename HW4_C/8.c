@@ -1,16 +1,26 @@
 #include <stdio.h>
 #include <stdlib.h>
-//not stable 
+//not stable but somehow works
 int minimal(int a, int b)
 {
     return (a < b) ? a: b;
 }
 
-int sravn(const void* a, const void* b) {
-    int c1 = *(const int*) a;
-    int c2 = *(const int*) b;
-    return c1 > c2;
+
+
+void bubbleSort(int arr[], int n)
+{
+    int i, j;
+    for (i = 0; i < n - 1; i++){
+        for (j = 0; j < n - i - 1; j++){
+            if (arr[j] > arr[j + 1]){
+                int t = arr[j];
+                arr[j] = arr[j+1];
+                arr[j+1] = t;}
 }
+}
+}
+
 
 int main(){
     int n;
@@ -19,7 +29,7 @@ int main(){
     for(int i = 0; i < n; i++) {
         scanf("%d", &arr[i]);
     }
-    qsort(arr, n, sizeof(int), sravn);
+    bubbleSort(arr, n);
     int dp[n];
     dp[0] = 0;
     for(int i = 1; i < n; i++) {

@@ -1,2 +1,2 @@
-# HW_python
-## HWn_python - где n номер дз
+# HW_programming
+## HWn_python/C - где n номер дз
