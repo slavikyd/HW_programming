@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <string.h>
-
+//NOT WORKS AT ALL
+//SOLUTION IS WROOONG
 int n;
 int dp[100001];
 int cout(int n) {
