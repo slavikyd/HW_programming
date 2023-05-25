@@ -12,7 +12,6 @@ void output(int arr[], int n) {
     }
 }
 
-
 int abs_Array(int arr[], int n) {
     int *cout = arr, out_func = 0;
     for(int i = 0; i < n; i++) {
@@ -26,7 +25,8 @@ int abs_Array(int arr[], int n) {
 }
 
 int main() {
-    int n; scanf("%d", &n);
+    int n; 
+    scanf("%d", &n);
     int arr[n];
     input(arr, n);
     printf("%d ", abs_Array(arr, n));
