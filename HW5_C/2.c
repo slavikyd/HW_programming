@@ -1,11 +1,9 @@
 #include <stdio.h>
-
 struct Person
 {
 	int age; 
 	char name[30]; 
 };
-
 float averageAge(struct Person arr[], int n) {
     float average = 0;
     for(int i = 0; i < n; i++){
@@ -18,7 +16,7 @@ int main() {
     int n; 
     scanf("%d", &n);
     struct Person arr[n];
-    for(int i = 0; i < n; i++) {
+    for(int i=0; i<n; i++) {
         scanf("%d", &arr[i].age);
         scanf("%s", arr[i].name);
     }
